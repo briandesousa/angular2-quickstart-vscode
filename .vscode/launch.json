@@ -5,14 +5,12 @@
 			"name": "Launch",
 			"type": "node",
 			"request": "launch",
-            "program": "app.js",
+            "program": "server.js",
 			"stopOnEntry": false,
 			"args": [],
 			"cwd": ".",
-			"runtimeExecutable": "npm-start.bat",
-			"runtimeArgs": [
-				"--nolazy"
-			],
+			"runtimeExecutable": "",
+			"runtimeArgs": [],
 			"env": {
 				"NODE_ENV": "development"
 			},
