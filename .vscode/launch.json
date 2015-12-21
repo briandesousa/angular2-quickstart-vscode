@@ -5,11 +5,11 @@
 			"name": "Launch",
 			"type": "node",
 			"request": "launch",
-            "program": "server.js",
+            "program": "node_modules/lite-server/bin/lite-server",
 			"stopOnEntry": false,
 			"args": [],
 			"cwd": ".",
-			"runtimeExecutable": "",
+			"runtimeExecutable": null,
 			"runtimeArgs": [],
 			"env": {
 				"NODE_ENV": "development"

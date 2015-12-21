@@ -19,10 +19,13 @@ System.register(['angular2/core'], function(exports_1) {
             AppComponent = (function () {
                 function AppComponent() {
                 }
+                AppComponent.prototype.getName = function () {
+                    return "Brian the Man";
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: '<h1>My Third Angular 2 App</h1>'
+                        template: '<h1>My Third Angular 2 App {{getName()}}</h1>'
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
