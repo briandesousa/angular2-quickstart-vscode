@@ -18,14 +18,16 @@ System.register(['angular2/core'], function(exports_1) {
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
+                    this.title = 'Tour of Heroes';
+                    this.hero = {
+                        id: 1,
+                        name: "windstorm"
+                    };
                 }
-                AppComponent.prototype.getName = function () {
-                    return "Brian the Man";
-                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: '<h1>My Third Angular 2 App {{getName()}}</h1>'
+                        template: "\n        <h1>{{title}}</h1>\n        <h2>{{hero.name}} details!</h2>\n        <div><label>id: </label>{{hero.id}}</div>\n        <div>\n            <label>name: </label>\n            <div><input [(ngModel)]=\"hero.name\" placeholder=\"name\"></div>\n        </div>\n        <div>Template string dynamic result of 1 + 1: " + (1 + 1) + "</div>\n        "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
