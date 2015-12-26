@@ -6,20 +6,7 @@ import {OnInit} from 'angular2/core';
 
 @Component({
     selector: 'my-app',
-    template: `
-        <h1>{{title}}</h1>
-        <h2>My Heroes</h2>
-        <ul class="heroes">
-        <li *ngFor="#hero of heroes" 
-            (click)="onSelect(hero)"
-            [class.selected]="hero === selectedHero">
-            <span class="badge">{{hero.id}}</span> {{hero.name}}
-        </li>
-        </ul>
-        <my-hero-detail [hero]="selectedHero"></my-hero-detail>
-        <br/>
-        <div>Template string dynamic result of 1 + 1: ${1+1}</div>
-    `,
+    templateUrl: 'app/app.component.html',
     styles:[`
         .heroes {list-style-type: none; margin-left: 1em; padding: 0; width: 10em;}
         .heroes li { cursor: pointer; position: relative; left: 0; transition: all 0.2s ease; }
