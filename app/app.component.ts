@@ -49,4 +49,16 @@ export class AppComponent implements OnInit {
     onSelect(hero : Hero) {
         this.selectedHero = hero;
     }
+    
+    addHero(heroName: string) {
+        this.heroes.push(new Hero(this.getRandomIntInclusive(100, 10000), heroName));
+    }
+    
+    /**
+     * Returns a random integer between min (included) and max (included)
+     */
+    private getRandomIntInclusive(min: number, max: number): number {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+}
 }

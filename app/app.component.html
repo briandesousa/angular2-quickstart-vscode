@@ -7,6 +7,12 @@
     <span class="badge">{{hero.id}}</span> {{hero.name}}
 </li>
 </ul>
+<div>
+    <input #heroName type="text" 
+        (keyup.enter)="addHero(heroName.value); heroName.value = '';" 
+        (blur)="addHero(heroName.value); heroName.value = '';" />
+    <button (click)="addHero(heroName.value)">Add Hero</button>
+</div>
 <my-hero-detail [hero]="selectedHero"></my-hero-detail>
 <br/>
 <div>Template string dynamic result of 1 + 1: ${1+1}</div>
