@@ -1,8 +1,38 @@
- <div *ngIf="hero">
+<div *ngIf="hero">
+    <style>
+        .heroSecretButton { 
+            border: 1px solid darkblue;
+            background: lightblue;
+            display: inline-block;
+            position: relative;
+            font-size: 1.1em;
+            font-family: Arial;
+            margin: 15px 0px 15px 0px;
+            padding: 5px;
+            cursor: pointer;
+        }
+    </style>
     <h2>{{hero.name}} details!</h2>
-    <div><label>id: </label>{{hero.id}}</div>
     <div>
-        <label>name: </label>
-        <input [(ngModel)]="hero.name" placeholder="name">
+        <label>id: </label>{{hero.id}}</div>
+    <div>
+        <div>
+            <label>Name: </label>
+            <input [(ngModel)]="hero.name" placeholder="name">
+        </div>
+        <div *ngIf="!hero.displayHeroSecret" class="heroSecretButton">
+            <span (click)="onClickShowHeroSecret($event)">Click Here to Show Hero Secret</span>
+        </div>
+        
+        <div *ngIf="hero.displayHeroSecret">
+            <div class="heroSecretButton">
+                <span (click)="onClickShowHeroSecret($event)">Click Here to Hide Hero Secret</span>
+                <br/><br/>
+                <div>
+                    <label>My secret power: </label>
+                    <input [(ngModel)]="hero.heroSecret" />
+                </div>                
+            </div>
+        </div>
     </div>
 </div>

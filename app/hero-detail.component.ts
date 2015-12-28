@@ -9,4 +9,8 @@ import {Hero} from './hero';
 export class HeroDetailComponent {
     
     public hero : Hero;
+    
+    onClickShowHeroSecret(event) {
+        this.hero.displayHeroSecret = !this.hero.displayHeroSecret;
+    }
 }
