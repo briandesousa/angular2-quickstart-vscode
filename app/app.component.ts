@@ -1,6 +1,7 @@
 import {Component} from 'angular2/core';
 import {Hero} from './hero';
 import {HeroDetailComponent} from './hero-detail.component';
+import {HeroFormComponent} from './hero-form.component';
 import {HeroService} from './hero.service';
 import {OnInit} from 'angular2/core';
 
@@ -24,7 +25,7 @@ import {OnInit} from 'angular2/core';
         .selected { background-color: #EEE; color: #369; }
  
     `],
-    directives: [HeroDetailComponent],
+    directives: [HeroFormComponent],
     providers: [HeroService]
 })
 export class AppComponent implements OnInit { 
