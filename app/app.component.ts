@@ -26,7 +26,7 @@ import {OnInit} from 'angular2/core';
  
     `],
     directives: [HeroFormComponent],
-    providers: [HeroService]
+    providers: []
 })
 export class AppComponent implements OnInit { 
 
@@ -52,7 +52,7 @@ export class AppComponent implements OnInit {
     }
     
     addHero(heroName: string) {
-        this.heroes.push(new Hero(this.getRandomIntInclusive(100, 10000), heroName));
+        this.heroes.push(new Hero(this.getRandomIntInclusive(100, 10000), heroName, ""));
     }
     
     /**
