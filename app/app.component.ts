@@ -5,12 +5,13 @@ import {HeroDetailComponent} from './hero-detail.component';
 import {HeroFormComponent} from './hero-form.component';
 import {HeroService} from './hero.service';
 import {OnInit} from 'angular2/core';
+import {CharacterCountPipe} from './character-count-pipe';
 
 @Component({
     selector: 'my-app',
     templateUrl: 'app/app.component.html',
     styles:[`
-        .heroes {list-style-type: none; margin-left: 1em; padding: 0; width: 10em;}
+        .heroes {list-style-type: none; margin-left: 1em; padding: 0; width: 20em;}
         .heroes li { cursor: pointer; position: relative; left: 0; transition: all 0.2s ease; }
         .heroes li:hover {color: #369; background-color: #EEE; left: .2em;}
         .heroes .badge {
@@ -27,6 +28,7 @@ import {OnInit} from 'angular2/core';
  
     `],
     directives: [HeroFormComponent],
+    pipes: [CharacterCountPipe],
     providers: []
 })
 export class AppComponent implements OnInit { 
@@ -62,5 +64,4 @@ export class AppComponent implements OnInit {
     private getRandomIntInclusive(min: number, max: number): number {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-}
 }
