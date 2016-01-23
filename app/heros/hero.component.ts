@@ -5,12 +5,12 @@ import {Inject} from 'angular2/core';
 import {Hero} from './hero';
 import {HeroDetailComponent} from './hero-detail.component';
 import {HeroFormComponent} from './hero-form.component';
-import {CharacterCountPipe} from './character-count-pipe';
+import {CharacterCountPipe} from '../character-count-pipe';
 import {HeroService} from './hero.service';
 
 @Component({
     selector: 'hero-component',
-    templateUrl: 'app/hero.component.html',
+    templateUrl: 'app/heros/hero.component.html',
     styles:[`
         .heroes {list-style-type: none; margin-left: 1em; padding: 0; width: 20em;}
         .heroes li { cursor: pointer; position: relative; left: 0; transition: all 0.2s ease; }

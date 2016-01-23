@@ -1,6 +1,6 @@
 import {bootstrap}    from 'angular2/platform/browser'
 import {AppComponent} from './app.component'
-import {HeroService}  from './hero.service'
+import {HeroService}  from './heros/hero.service'
 import {provide} from 'angular2/core';
 import {ROUTER_PROVIDERS} from 'angular2/router';
 

@@ -1,7 +1,7 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 
-import {HeroComponent} from './hero.component';
+import {HeroComponent} from './heros/hero.component';
 import {HelpComponent} from './help.component';
 
 @Component({

@@ -4,7 +4,7 @@ import {Hero} from './hero';
 
 @Component({
     selector: 'hero-form',
-    templateUrl: 'app/hero-form.component.html',
+    templateUrl: 'app/heros/hero-form.component.html',
     inputs: ['hero']
 })
 export class HeroFormComponent {
