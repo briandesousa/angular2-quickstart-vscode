@@ -1,8 +1,9 @@
 <h1>{{title | uppercase }}</h1>
 
 <nav>
-    <a [routerLink]="['Home']">Home</a>
-    <a [routerLink]="['Help']">Help</a>
+    <a [routerLink]="['Home']">Home</a> |
+    <a (click)="heroHelpClick()" href="javascript:false;">Hero Help</a> |
+    <a [routerLink]="['Help', { id: '2'}]">General Help</a>
 </nav>
 <div></div>
 

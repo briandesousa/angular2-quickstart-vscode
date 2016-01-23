@@ -1,5 +1,5 @@
 import {Component} from 'angular2/core';
-import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+import {RouteConfig, Router, ROUTER_DIRECTIVES} from 'angular2/router';
 
 import {HeroComponent} from './heros/hero.component';
 import {HelpComponent} from './help.component';
@@ -10,9 +10,16 @@ import {HelpComponent} from './help.component';
     directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
-  {path:'/help', name: 'Help', component: HelpComponent},
-  {path:'/', name: 'Home', component: HeroComponent, useAsDefault: true}
+  {path:'/help/:id', name: 'Help', component: HelpComponent},
+  {path:'/hero', name: 'Home', component: HeroComponent, useAsDefault: true}
 ])
 export class AppComponent { 
 
+    constructor(private _router: Router) {
+    }
+    
+    heroHelpClick() {
+        this._router.navigate(['Help', { id : '1' }]);
+        return false;
+    }
 }
