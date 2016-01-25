@@ -2,11 +2,11 @@ import {Component} from 'angular2/core';
 import {RouteParams} from 'angular2/router';
 
 @Component({
-    selector: 'help',
-    template: '<h2>Helpful Information</h2><p>{{getHelpContent()}}</p>'
+    selector: 'help-detail',
+    template: '<p>{{getHelpContent()}}</p>'
 })
-export class HelpComponent {
-    
+export class HelpDetail {
+      
     constructor(private _routeParams: RouteParams) {
         
     }

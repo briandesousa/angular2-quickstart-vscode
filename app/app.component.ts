@@ -2,7 +2,7 @@ import {Component} from 'angular2/core';
 import {RouteConfig, Router, ROUTER_DIRECTIVES} from 'angular2/router';
 
 import {HeroComponent} from './heros/hero.component';
-import {HelpComponent} from './help.component';
+import {Help} from './help/help.component';
 
 @Component({
     selector: 'my-app',
@@ -10,7 +10,7 @@ import {HelpComponent} from './help.component';
     directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
-  {path:'/help/:id', name: 'Help', component: HelpComponent},
+  {path:'/help/...', name: 'Help', component: Help},
   {path:'/hero', name: 'Home', component: HeroComponent, useAsDefault: true}
 ])
 export class AppComponent { 
@@ -19,7 +19,7 @@ export class AppComponent {
     }
     
     heroHelpClick() {
-        this._router.navigate(['Help', { id : '1' }]);
+        this._router.navigate(['Help', 'HelpDetail', { id : '2' }]);
         return false;
     }
 }
