@@ -19,7 +19,7 @@ export class AppComponent {
     }
     
     heroHelpClick() {
-        this._router.navigate(['Help', 'HelpDetail', { id : '2' }]);
+        this._router.navigate(['Help', 'HelpDetail', { 'id' : '2', 'junkparam':'junk' }]);
         return false;
     }
 }
