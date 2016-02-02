@@ -11,6 +11,7 @@ import {Help} from './help/help.component';
 })
 @RouteConfig([
   {path:'/help/...', name: 'Help', component: Help},
+  {path: '/generalhelp', name: 'GeneralHelp', redirectTo: ['Help', 'HelpDetail', {'id' : '1'}]},
   {path:'/hero', name: 'Home', component: HeroComponent, useAsDefault: true}
 ])
 export class AppComponent { 
