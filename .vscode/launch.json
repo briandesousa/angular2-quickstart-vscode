@@ -5,18 +5,17 @@
 			"name": "Launch",
 			"type": "node",
 			"request": "launch",
-            "program": "node_modules/lite-server/bin/lite-server",
+            "program": "${workspaceRoot}/node_modules/lite-server/bin/lite-server",
 			"stopOnEntry": false,
 			"args": [],
-			"cwd": ".",
+			"cwd": "${workspaceRoot}",
 			"runtimeExecutable": null,
 			"runtimeArgs": [],
 			"env": {
 				"NODE_ENV": "development"
 			},
-			"externalConsole": false,
-			"sourceMaps": false,
-			"outDir": null
+			"console": "integratedTerminal",
+			"sourceMaps": false
 		},
 		{
 			"name": "Attach",
