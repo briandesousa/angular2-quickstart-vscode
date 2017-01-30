@@ -1,12 +1,12 @@
-import {Component} from 'angular2/core';
+import { Component } from 'angular2/core';
 
 @Component({
-    selector: 'my-app',
-    template: '<h1>My Third Angular 2 App {{getName()}}</h1>'
+    selector: 'app',
+    template: '<h1>{{getMessage()}}</h1>'
 })
-export class AppComponent { 
-
-    public getName() : String {
-        return "Brian the Man";
+export class AppComponent {
+    private message: string = "Hello World";
+    public getMessage(): string {
+        return this.message;
     }
 }
